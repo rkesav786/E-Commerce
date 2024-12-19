@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 
-export const HomeCards = () => {
+export const HomeCards = ({ title }) => {
   const scrollRef = useRef(null);
 
   // Scroll handler functions
@@ -15,7 +16,7 @@ export const HomeCards = () => {
   return (
     <>
       <div style={{ background: "#F8FAFC", position: "relative" }}>
-        <div className="h4 mb-3 mt-3 text-center">HomeCards</div>
+        <div className="h4 mb-3 mt-3 text-center">{title}</div>
         <div className="position-relative">
           {/* Left Arrow */}
           <button
@@ -42,19 +43,21 @@ export const HomeCards = () => {
             }}
             ref={scrollRef}
           >
-            {Array.from({ length: 8 }).map((_, index) => (
+            {Array.from({ length: 15 }).map((_, index) => (
               <div key={index} style={{ display: "inline-block" }}>
-                <div className="card text-center p-3" style={{ width: 190 }}>
-                  <div className="card-img-top">
-                    <img src="/samsungs23ultra.webp" width={160} alt="" />
+                <Link to="/mobile-phones">
+                  <div className="card text-center p-3" style={{ width: 190 }}>
+                    <div className="card-img-top">
+                      <img src="/samsungs23ultra.webp" width={160} alt="" />
+                    </div>
+                    <div className="card-title mt-3 mb-0 p-0 h6">
+                      Samsung Phones
+                    </div>
+                    <div className="card-text m-0 p-0 fw-bold">
+                      Starting from ₹7999
+                    </div>
                   </div>
-                  <div className="card-title mt-3 mb-0 p-0 h6">
-                    Samsung Phones
-                  </div>
-                  <div className="card-text m-0 p-0 fw-bold">
-                    Starting from ₹7999
-                  </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>

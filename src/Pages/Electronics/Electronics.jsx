@@ -1,5 +1,5 @@
 import React from "react";
 
-export const index = () => {
+export const Electronics = () => {
   return <div>index</div>;
 };

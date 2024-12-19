@@ -72,14 +72,6 @@ export const Carousel = () => {
           <span className="carousel-control-next-icon"></span>
         </button>
       </div>
-
-      <div className="container-fluid mt-3">
-        <h3>Carousel Example</h3>
-        <p>
-          The following example shows how to create a basic carousel with
-          indicators and controls.
-        </p>
-      </div>
     </div>
   );
 };
